@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassava Cake Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #9c6521; /* Rich Brown/Gold for Cassava Cake */
+            --secondary-color: #f8f0e3; 
+            --accent-color: #ffc800; /* Bright Yellow/Gold for Custard */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* --- Global Recipe Styling --- */
+        .recipe-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            padding-bottom: 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        /* Time Section */
+        .time-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .time-item strong {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .time-item span {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Ingredients & Instructions Titles */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List - FIX RETAINED for alignment */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            /* Padding left provides space for the step number block */
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 45px; /* Width of the step number block */
+            height: 100%;
+            background-color: var(--accent-color); 
+            color: var(--primary-color); 
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* Removed .note styling entirely */
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1 class="recipe-title">Cassava Cake </h1>
+    <p class="tagline">A heavy, chewy root crop cake with a creamy custard top.</p>
+
+    <div class="time-box">
+        <div class="time-item">
+            <strong>15 mins</strong>
+            <span>Prep Time</span>
+        </div>
+        <div class="time-item">
+            <strong>1 hour</strong>
+            <span>Cook Time</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ingredients (Cake)</h2>
+    <div class="ingredients">
+        <ul>
+            <li>2 packs (16oz each) Grated Cassava (frozen is fine, thaw first)</li>
+            <li>1 can (14oz) Coconut milk</li>
+            <li>1 can (12oz) Evaporated milk</li>
+            <li>½ can Condensed milk (save the other half for topping)</li>
+            <li>2 Eggs</li>
+            <li>¼ cup Melted butter</li>
+        </ul>
+    </div>
+    
+    <h2 class="section-title">Ingredients (Topping)</h2>
+    <div class="ingredients">
+        <ul>
+            <li>½ can Condensed milk (reserved from above)</li>
+            <li>½ cup Coconut milk or cream</li>
+            <li>1 Egg yolk</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Mix: Preheat oven to 350°F (175°C). In a large bowl, mix all cake ingredients thoroughly.
+            </li>
+            <li>
+                Bake: Pour into a greased baking dish (9x13 or two 9-inch pans). Bake for 45-50 minutes until the top is firm.
+            </li>
+            <li>
+                Topping: Whisk the topping ingredients together.
+            </li>
+            <li>
+                Broil: Pour the topping over the baked cake. Spread evenly. Bake for another 15 minutes, or broil for 2-3 minutes until the custard top is golden brown and caramelized. (Watch closely during the broiling step to prevent burning the custard!)
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

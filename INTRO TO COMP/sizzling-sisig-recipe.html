@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzling Sisig Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #a01d26; /* Deep Red/Chili Color */
+            --secondary-color: #f8f0e3; 
+            --accent-color: #ff8c00; /* Orange/Sizzling Accent */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* --- Global Recipe Styling --- */
+        .recipe-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            padding-bottom: 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        /* Time Section */
+        .time-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .time-item strong {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .time-item span {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Ingredients & Instructions Titles */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List - FIX RETAINED for alignment */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 45px; 
+            height: 100%;
+            background-color: var(--primary-color); /* Deep Red step number */
+            color: white; 
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* Special Note/Rule */
+        .note {
+            background-color: #ffeaea; /* Light red/pink */
+            border-left: 5px solid var(--accent-color); 
+            padding: 15px;
+            margin: 20px 0;
+            color: var(--primary-color);
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1 class="recipe-title"> Sizzling Sisig </h1>
+    <p class="tagline">A spicy pork appetizer made from pig face/ears. It should be crispy, not mayonnaise-y.</p>
+
+    <div class="time-box">
+        <div class="time-item">
+            <strong>10-15 mins</strong>
+            <span>Prep Time</span>
+        </div>
+        <div class="time-item">
+            <strong>40-50 mins</strong>
+            <span>Cook Time (Boiling)</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ingredients</h2>
+    <div class="ingredients">
+        <ul>
+            <li>1 kg Pig ears and Pork belly </li>
+            <li>2 large Onions, diced</li>
+            <li>3-5 pcs Red/Green Chili (Siling Labuyo), minced</li>
+            <li>3 tbsp Soy sauce</li>
+            <li>4 tbsp Calamansi juice (or lemon)</li>
+            <li>Salt and Pepper</li>
+            <li>Optional: Chicken liver (grilled and mashed) for creaminess.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Boil: Boil the pork in water with salt and pepper for 40-50 minutes until tender. Drain and let dry.
+            </li>
+            <li>
+                Grill/Fry: Grill the boiled pork over charcoal (for smoky flavor) or deep fry until crispy.
+            </li>
+            <li>
+                Chop: Chop the meat into small bits.
+            </li>
+            <li>
+                Sauté: Sauté the onions. Add the chopped meat and mashed chicken liver (if using). Cook until sizzling.
+            </li>
+            <li>
+                Season: Add soy sauce, chilies, and adjust salt/pepper.
+            </li>
+            <li>
+                Serve: Transfer to a sizzling metal plate (if you have one). Squeeze fresh calamansi over it just before eating.
+                <div class="note">
+                    If you want the "creamy" fast-food style, stir in 2 tbsp mayonnaise at the very end, though purists argue against this!
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

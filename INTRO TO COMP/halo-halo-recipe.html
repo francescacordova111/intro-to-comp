@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo-Halo Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #3f1e5c; /* Deep Purple/Ube for Halo-Halo */
+            --secondary-color: #f8f0e3; 
+            --accent-color: #c99c55; /* Gold/Yellow */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* --- Global Recipe Styling --- */
+        .recipe-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            padding-bottom: 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        /* Time Section (Removed as Halo-Halo is mostly assembly) */
+        
+        /* Ingredients & Instructions Titles */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List: Modified for Layers/Assembly Steps */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            /* Padding left provides space for the step number block */
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 45px; /* Width of the step number block */
+            height: 100%;
+            background-color: var(--primary-color); 
+            color: white; 
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* Special Note/Rule for Eating */
+        .note {
+            background-color: #e6e6fa; /* Lavender */
+            border-left: 5px solid var(--primary-color); 
+            padding: 15px;
+            margin: 20px 0;
+            color: var(--primary-color);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .layer-list {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .layer-list li {
+            font-weight: bold;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1 class="recipe-title"> Halo-Halo </h1>
+    <p class="tagline">The ultimate shaved ice dessert. "Halo-halo" literally means "mix-mix."</p>
+
+    <h2 class="section-title">Ingredients / Components</h2>
+    <div class="ingredients">
+        <ul>
+            <li>Sweeteners: Sweetened red beans, chickpeas (garbanzos), sugar palm fruit (kaong), coconut gel (nata de coco), macapuno (sweet coconut strings), and jackfruit (langka).</li>
+            <li>The Liquid: ¼ cup Evaporated milk</li>
+            <li>The Base: Shaved ice (as needed to fill glass)</li>
+            <li>The Crown: Slice of Leche Flan (creme caramel) and a scoop of Ube (purple yam) ice cream.</li>
+            <li>The Crunch: Toasted "pinipig" (pounded young rice) or cornflakes.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions: Assembly (Bottom to Top)</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Sweeteners: Place 1 tbsp of each of the mixed sweeteners (red beans, nata de coco, langka, etc.) at the very bottom of a tall glass.
+            </li>
+            <li>
+                The Ice: Fill the tall glass firmly with shaved ice.
+            </li>
+            <li>
+                The Milk: Slowly pour the ¼ cup Evaporated milk over the shaved ice, allowing it to saturate.
+            </li>
+            <li>
+                The Crown: Carefully place the slice of Leche Flan and the scoop of Ube ice cream on top of the ice.
+            </li>
+            <li>
+                Crunch: Sprinkle with pinipig or cornflakes.
+            </li>
+        </ol>
+
+        <h3 class="section-title" style="font-size: 1.5em; margin-top: 10px; border-left-color: var(--primary-color); color: var(--primary-color);">How to Eat</h3>
+        <div class="note">
+            Use a long spoon to mix everything together into a purple, slushy consistency before eating. Don't be afraid to mix-mix!
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

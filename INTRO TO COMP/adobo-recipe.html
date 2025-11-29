@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Adobo Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #724218; /* Dark brown, earthy */
+            --secondary-color: #f8f0e3; /* Light cream/off-white */
+            --accent-color: #c99c55; /* Gold/yellow for highlights */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+
+        /* Time Section */
+        .time-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .time-item strong {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .time-item span {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Ingredients & Instructions */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List - FIX APPLIED HERE */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            /* Increased padding-left to make space for the step number block */
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            /* Positioned the block to the far left of the list item padding */
+            left: 0; 
+            top: 0;
+            /* Define the width of the step number block */
+            width: 45px; 
+            height: 100%;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* Special Note/Rule */
+        .note {
+            background-color: #fcf8e3; /* Light yellow background */
+            border-left: 5px solid #8a6d3b; /* Darker yellow border */
+            padding: 15px;
+            margin: 20px 0;
+            color: #8a6d3b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1>Chicken Adobo</h1>
+    <p class="tagline">The national dish. The secret is the balance of salty, sour, and savory garlic.</p>
+
+    <div class="time-box">
+        <div class="time-item">
+            <strong>10 mins</strong>
+            <span>Prep Time</span>
+        </div>
+        <div class="time-item">
+            <strong>+30 mins</strong>
+            <span>Marinade</span>
+        </div>
+        <div class="time-item">
+            <strong>40 mins</strong>
+            <span>Cook Time</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ingredients</h2>
+    <div class="ingredients">
+        <ul>
+            <li>1 kg Chicken thighs/drumsticks (bone-in, skin-on is best)</li>
+            <li>½ cup Soy sauce</li>
+            <li>½ cup White vinegar (cane or coconut vinegar)</li>
+            <li>1 head Garlic, peeled and crushed</li>
+            <li>1 tbsp Whole black peppercorns</li>
+            <li>3-4 Dried bay leaves</li>
+            <li>1 tbsp Brown sugar (optional, for balance)</li>
+            <li>1 tbsp Oil</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Marinate: Combine chicken, soy sauce, garlic, and peppercorns in a bowl. Marinate for at least 30 minutes (overnight is better).
+            </li>
+            <li>
+                Sear: Remove chicken from marinade (reserve the liquid). Heat oil in a pan over medium-high heat. Pan-fry chicken until the skin is brown and slightly crisp (3-5 mins per side).
+            </li>
+            <li>
+                Simmer: Pour the reserved marinade into the pan. Add the bay leaves and water (about ½ cup). Bring to a boil.
+            </li>
+            <li>
+                 Once boiling, add the vinegar. Do not stir for 5 minutes. <div class="note">
+                    This allows the vinegar acid to "cook off" so it doesn't taste raw.
+                </div>
+            </li>
+            <li>
+                Reduce: Lower heat, cover, and simmer for 20-30 minutes until chicken is tender. Uncover and simmer until the sauce reduces to a thick, oily glaze. Add sugar if you like it sweeter.
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
