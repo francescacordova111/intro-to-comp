@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kare-Kare (Oxtail Peanut Stew) Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #724218; /* Dark brown, earthy (used for general text/structure) */
+            --secondary-color: #f8f0e3; /* Light cream/off-white */
+            --accent-color: #c99c55; /* Gold/yellow for highlights (used for Adobo, retained for general style) */
+            --kare-kare-color: #a0522d; /* Sienna/Brown for Kare-Kare accents */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* --- Global Recipe Styling --- */
+        .recipe-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            padding-bottom: 10px;
+            color: var(--kare-kare-color);
+            border-bottom: 3px solid var(--kare-kare-color);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        /* Time Section */
+        .time-box {
+            display: flex;
+            justify-content: space-around;
+            /* Use Kare-Kare specific color for the time box */
+            background-color: var(--kare-kare-color);
+            color: #fff;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .time-item strong {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .time-item span {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Ingredients & Instructions Titles */
+        .section-title {
+            color: var(--kare-kare-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            /* Use Kare-Kare specific color for the border */
+            border-left: 5px solid var(--kare-kare-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            /* Use Kare-Kare specific color for bullet points */
+            color: var(--kare-kare-color); 
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List - FIX RETAINED for alignment */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            /* Padding left provides space for the step number block */
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 45px; /* Width of the step number block */
+            height: 100%;
+            /* Use Kare-Kare specific color for step numbers */
+            background-color: var(--kare-kare-color); 
+            color: #fff; /* White text for contrast */
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        /* Special Note/Rule */
+        .note {
+            background-color: #fcf8e3; 
+            border-left: 5px solid #8a6d3b; 
+            padding: 15px;
+            margin: 20px 0;
+            color: #8a6d3b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1 class="recipe-title">Kare-Kare </h1>
+    <p class="tagline">A rich, orange stew beloved for its savory peanut sauce. Always served with **Bagoong** (shrimp paste).</p>
+
+    <div class="time-box">
+        <div class="time-item">
+            <strong>20 mins</strong>
+            <span>Prep Time</span>
+        </div>
+        <div class="time-item">
+            <strong>2.5-3 hours</strong>
+            <span>Cook Time (Tenderizing)</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ingredients</h2>
+    <div class="ingredients">
+        <ul>
+            <li>1 kg Oxtail (cut into 2-inch slices)</li>
+            <li>½ cup Peanut butter (smooth or crunchy)</li>
+            <li>½ cup Ground toasted peanuts (optional, for texture)</li>
+            <li>1 tbsp Annatto seeds (soaked in ¼ cup warm water to make red water) OR 1 tsp Annatto powder</li>
+            <li>Vegetables: Eggplant, string beans (sitaw), bok choy (pechay), banana heart (puso ng saging).</li>
+            <li>Essential Side: Bagoong Alamang (Sautéed Shrimp Paste)</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Tenderize: Boil oxtail in water with onions and salt for 2-3 hours (or 45 mins in a pressure cooker) until fork-tender. Reserve 4 cups of the broth.
+            </li>
+            <li>
+                Sauté: In a large pot, sauté garlic and onion. Add the softened oxtail.
+            </li>
+            <li>
+                Sauce Base: Pour in the reserved broth and the red annatto water (discard seeds). Bring to a simmer.
+            </li>
+            <li>
+                Thicken: Stir in the peanut butter and ground peanuts. Simmer for 5-7 minutes. If it's too thin, add a slurry (cornstarch mixed with water) to thicken.
+            </li>
+            <li>
+                Veggies: Add the vegetables (hardest first: string beans & eggplant, then bok choy last). Cook for 5 minutes.
+            </li>
+            <li>
+                Serve: Serve hot with plain white rice and a side of bagoong. 
+                <div class="note">
+                    The stew is bland on its own; the bagoong provides the saltiness.
+                </div>
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinigang na Baboy Recipe</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-color: #38761d; /* Dark Green (Kangkong/Vegetables) */
+            --secondary-color: #f8f0e3; 
+            --accent-color: #a01d26; /* Tamarind Red/Sour Accent */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* --- Global Recipe Styling --- */
+        .recipe-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 0.1em;
+            padding-bottom: 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        /* Time Section */
+        .time-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .time-item strong {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .time-item span {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Ingredients & Instructions Titles */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Ingredients List */
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+        }
+
+        /* Instructions List - FIX RETAINED for alignment */
+        .instructions ol {
+            list-style-type: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 20px;
+            /* Padding left provides space for the step number block */
+            padding: 15px 15px 15px 60px; 
+            position: relative;
+            background-color: #fafafa;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions li:before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 45px; /* Width of the step number block */
+            height: 100%;
+            background-color: var(--primary-color); 
+            color: white; 
+            font-weight: bold;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px 0 0 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-container">
+    
+    <h1 class="recipe-title">Sinigang na Baboy </h1>
+    <p class="tagline">The most common and hearty version of the sour soup, typically using pork belly and taro.</p>
+
+    <div class="time-box">
+        <div class="time-item">
+            <strong>20 mins</strong>
+            <span>Prep Time</span>
+        </div>
+        <div class="time-item">
+            <strong>1.5 - 2 hours</strong>
+            <span>Cook Time</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ingredients</h2>
+    <div class="ingredients">
+        <ul>
+            <li>1 kg Pork belly or spare ribs, cut into 2-inch cubes</li>
+            <li>1 large Onion, quartered</li>
+            <li>3 medium Tomatoes, quartered</li>
+            <li>2-3 pieces Gabi (Taro root), peeled and halved (key for a creamy broth)</li>
+            <li>1 pack (22g) Tamarind soup mix (Sinigang sa Sampaloc Mix) OR fresh tamarind paste</li>
+            <li>2 tbsp Fish sauce (Patis), plus more for dipping</li>
+            <li>1 medium Daikon radish (labanos), sliced</li>
+            <li>1 bunch String beans (sitaw), cut into 2-inch lengths</li>
+            <li>5-7 pieces Okra, ends trimmed</li>
+            <li>2 pieces Long green chili pepper (siling pansigang), whole</li>
+            <li>1 bunch Kangkong (Water Spinach), leaves and tender stems</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <div class="instructions">
+        <ol>
+            <li>
+                Boil and Tenderize: In a large pot, place the pork, onion, and enough water to cover the meat (about 8-10 cups). Bring to a boil. Remove any scum that rises to the surface.
+            </li>
+            <li> Simmer, covered, for 1 to 1.5 hours, or until the pork is very tender.
+            </li>
+            <li>
+                Cream the Broth: When the gabi is soft, lightly mash a few pieces against the side of the pot and stir to release the starch. This is what makes the broth slightly thicker and creamier.
+            </li>
+            <li>
+                Sour the Soup: Add the tamarind soup mix and the fish sauce. Stir well and taste. Adjust the sourness (add more mix/tamarind) or saltiness (add more fish sauce) to your liking.
+            </li>
+            <li>
+                Add Hard Vegetables: Add the daikon radish, string beans, and okra. Simmer for about 5-7 minutes.
+            </li>
+            <li>
+                Finishing Touches: Add the long green chili peppers and the kangkong. Cover and turn off the heat. Let it sit for 2-3 minutes; the residual heat will cook the leafy vegetables perfectly.
+            </li>
+            <li>
+                Serve: Serve hot with steamed rice and a small dish of fish sauce with cut chili (siling labuyo) for dipping the pork.
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>
